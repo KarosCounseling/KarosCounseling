@@ -1,0 +1,17 @@
+name: Build Aurora Website
+
+on:
+  push:
+    branches:
+      - main  # The workflow runs whenever you push to the 'main' branch.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Aurora website
+        uses: capjamesg/aurora-action@V1
